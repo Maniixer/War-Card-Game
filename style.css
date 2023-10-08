@@ -1,0 +1,104 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1c29;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.remaining-cards-container {
+  display: flex;
+  align-items: center;
+
+  margin-left: 1em;
+}
+
+#cards-container {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  #cards-container {
+    flex-direction: column;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(30, 28, 41, 0.7), rgba(30, 28, 41, 0.7)), url("/img/Player\ 1.png");
+  background-size: cover;
+  height: 240px;
+  width: calc(200px * 5 / 7);
+  border: 2px solid #a692412f;
+  border-radius: 12px;
+  padding: 0.3rem;
+  margin: 0.5em;
+}
+
+.card-layout {
+  text-align: center;
+}
+
+div:nth-of-type(2).card {
+  background: linear-gradient(rgba(30, 28, 41, 0.7), rgba(30, 28, 41, 0.7)), url("/img/Player\ 2.png");
+  background-size: cover;
+}
+
+.img {
+  opacity: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+#new-deck,
+#draw-cards {
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-deck {
+  color: white;
+  background-color: brown;
+  border: 1px solid white;
+}
+
+#draw-cards {
+  background-color: rgb(228, 228, 78);
+  color: #1e1c29;
+  border: 1px solid black;
+}
+
+#card-winner,
+#remaining-cards,
+.score {
+  color: white;
+}
+
+#remaining-cards {
+  font-size: 0.8em;
+}
+
+#draw-cards:disabled {
+  color: rgb(212, 212, 212);
+  background-color: rgb(138, 138, 138);
+  border: 1px solid rgb(182, 182, 182);
+  cursor: not-allowed;
+}
